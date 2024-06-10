@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "220139447482",
+    "project_id": "daniel-a52af",
+    "storage_bucket": "daniel-a52af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220139447482:android:8dce3d94dd226e66324e83",
+        "android_client_info": {
+          "package_name": "com.daniel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220139447482-b6dplpjlgg2m32c8gvs26lnvlekvrp9q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daniel",
+            "certificate_hash": "e07adfe482d0360c583ebc3bc57438f499938f1d"
+          }
+        },
+        {
+          "client_id": "220139447482-166cfpegh696qpitae14epcv96qplh0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVxuf1ohna3Bhvnnazx_q3t_32Ejwrl4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220139447482-166cfpegh696qpitae14epcv96qplh0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
