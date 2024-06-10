@@ -1,0 +1,30 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-jwt": "^8.4.1",
+    "fs-extra": "^11.2.0",
+    "google-auth-library": "^9.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.45",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
+    "node-cron": "^3.0.3",
+    "selfsigned": "^2.4.1",
+    "sequelize": "^6.37.1",
+    "socket.io": "^4.7.5",
+    "tzdata": "^1.0.40",
+    "uuid": "^9.0.1",
+    "ws": "^8.16.0"
+  }
+}

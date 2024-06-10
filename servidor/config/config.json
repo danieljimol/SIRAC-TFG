@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "sirac",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "Europe/Madrid",
+    "dialectOptions": {
+      "useUTC": false
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "sirac",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "Europe/Madrid",
+    "dialectOptions": {
+      "useUTC": false
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "sirac",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "Europe/Madrid",
+    "dialectOptions": {
+      "useUTC": false
+    }
+  }
+}
