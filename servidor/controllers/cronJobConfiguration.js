@@ -1,9 +1,8 @@
 const cron = require('node-cron');
 const { Horario } = require('../models');
-const { registrarAusencias } = require('./asistenciaController');  // Asegúrate de exportar esta función desde su módulo
+const { registrarAusencias } = require('./asistenciaController');
 
 async function configurarCronJobs() {
-  console.log("VOY A EJECUTAR EL configurarCronJobs");
   try {
     // Obtener todos los horarios de las clases
     const horarios = await Horario.findAll();

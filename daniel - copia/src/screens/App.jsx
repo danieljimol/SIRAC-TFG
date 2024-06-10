@@ -72,7 +72,7 @@ const DetectorApp = ({ navigation }) => {
     try {
       const granted = await PermissionsAndroid.requestMultiple([
         PermissionsAndroid.PERMISSIONS.BLUETOOTH_SCAN,
-        PermissionsAndroid.PERMISSIONS.BLUETOOTH_CONNECT, // Asegúrate de solicitar también este permiso para conexiones.
+        PermissionsAndroid.PERMISSIONS.BLUETOOTH_CONNECT,
       ]);
 
       if (granted['android.permission.BLUETOOTH_SCAN'] === PermissionsAndroid.RESULTS.GRANTED &&
@@ -136,7 +136,7 @@ const DetectorApp = ({ navigation }) => {
     try {
       const response = await axios.get(`/asistencia/faltas/${asignaturaSeleccionada.id}`);
       const { data } = response;
-      console.log('Faltas recibidas:', data); // Agrega este log para verificar la estructura de los datos
+      console.log('Faltas recibidas:', data);
       setFaltasAlumnos(data);
     } catch (error) {
       console.log('Error al obtener las faltas', error);
@@ -185,7 +185,7 @@ const DetectorApp = ({ navigation }) => {
   };  
 
   useEffect(() => {
-    if (Platform.OS === 'android' && Platform.Version >= 31) { // API nivel 31 corresponde a Android 12
+    if (Platform.OS === 'android' && Platform.Version >= 31) {
       requestBluetoothPermissions();
     }
   

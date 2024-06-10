@@ -51,7 +51,6 @@ const LogIn = ({ navigation }) => {
       console.log('Bluetooth and Location permissions granted');
     } else {
       // console.log('Permissions not granted');
-      // Maneja aquí el caso en que no se otorguen los permisos
     }
   };
 
@@ -129,7 +128,7 @@ const LogIn = ({ navigation }) => {
       const idToken = userInfo.idToken;
 
       const response = await axios.post('/signin/verify-google-token', { token: idToken, cargo: elegirCargo });
-      // Si el servidor responde correctamente (200 OK), maneja la sesión
+      // Si el servidor responde correctamente (200 OK)
       if (response.status === 200) {
         const { data } = response;
 

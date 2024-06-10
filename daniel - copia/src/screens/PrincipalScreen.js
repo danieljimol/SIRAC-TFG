@@ -108,7 +108,6 @@ const Principal = () => {
     initializeApp();
 
     socket.on('asistenciaRegistrada', async (data) => {
-      console.log('Esta es la data que recibo de asistenciaRegistrada :', data);
       const alumnoId = await AsyncStorage.getItem('alumnoId');
       if (data.alumnoId == alumnoId) {
         setEstaRegistradaAsistencia(true);

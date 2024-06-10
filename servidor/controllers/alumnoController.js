@@ -17,7 +17,6 @@ async function findAlumnoByUUIDBLE(uuidBLE) {
 }
 
 async function createAlumno(alumnoData) {
-  console.log("Entro aquí das ");
   return await Alumno.create(alumnoData);
 }
 
@@ -52,8 +51,6 @@ const alumnoController = {
         return res.status(400).send("Código incorrecto");
       }
 
-      console.log("ESTO ES LO QUE VOY A METER " + req.user.userId + " " + asignatura.id);
-
       const data = {
         alumnoId: req.user.userId,
         asignaturaId: asignatura.id
@@ -85,12 +82,12 @@ const alumnoController = {
         }
       });
   
-      if (asignatura === 0) { // `destroy` returns the number of affected rows, not `null` or an object
+      if (asignatura === 0) {
         console.log("No hemos encontrado ninguna asignatura");
         return res.status(400).send("Código incorrecto");
       }
   
-      res.status(200).send("Asignatura eliminada correctamente"); // Asegúrate de enviar una respuesta
+      res.status(200).send("Asignatura eliminada correctamente");
     } catch (error) {
       console.error(`Error al salirse a clase ${error}`);
       res.status(400).send(error);
@@ -107,8 +104,6 @@ const alumnoController = {
 
       const profesorId = req.user.userId;
       const asignaturaId = req.params.asignaturaId;
-
-      console.log(`AsignaturaId que me llegaaaa ${asignaturaId}`);
 
       const alumnos = await Alumno.findAll({
         include: [{
@@ -160,14 +155,10 @@ const alumnoController = {
       // Asignatura actual id
       const asignaturaActualId = asignaturaActual.asignaturaId;
 
-      console.log("ASIGNATURA ACTUAL ID " + asignaturaActualId);
-
       // Ahora encuentra todos los alumnos que no han registrado asistencia en esta asignatura hoy
       const fechaCompletaHoy = new Date();
       const fechaHoy = new Date();
       fechaHoy.setHours(0, 0, 0, 0);
-
-      console.log("FECHA HOY " + fechaHoy);
 
       const alumnosRegistradosHoy = await Asistencia.findAll({
         where: {
@@ -219,8 +210,6 @@ const alumnoController = {
       const fechaCompletaHoy = new Date();
       const fechaHoy = new Date();
       fechaHoy.setHours(0, 0, 0, 0);
-
-      console.log("FECHA HOY " + fechaHoy);
 
       const alumnosRegistradosHoy = await Asistencia.findAll({
         where: {
@@ -292,7 +281,6 @@ const alumnoController = {
   },
 
   async getByEmail(req, res) {
-    console.log(req.params.email);
     try {
       const alumno = await findAlumnoByEmail(req.params.email);
       if (!alumno) {
@@ -305,7 +293,6 @@ const alumnoController = {
   },
 
   async getByUUIDBLE(req, res) {
-    console.log('UUIDBLE ' + req.params.uuidBLE);
     try {
       const alumno = await findAlumnoByUUIDBLE(req.params.uuidBLE);
       if (!alumno) {
